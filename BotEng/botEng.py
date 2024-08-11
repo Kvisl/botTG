@@ -82,8 +82,6 @@ def create_cards(message):
         with bot.retrieve_data(message.from_user.id, message.chat.id) as data:
             data['target_word'] = target_word
             data['translate_word'] = translate_word
-    else:
-        bot.send_message(message.chat.id, "Вы изучили все слова! Добавьте новые слова для изучения.")
 
 
 @bot.message_handler(commands=['cards', 'start'])
